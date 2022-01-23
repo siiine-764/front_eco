@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+}
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position:relative;
+    line-height: 65px;
+    text-align: center;
+    z-index: 1;
+}
+
+.nav div.logo {
+    float: left;
+    height: auto;
+    padding-left: 3rem;
+}
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+.nav .logo a img{
+    width: 100%;
+    border-radius: 5px;
+}
+.nav div.logo a:hover {
+    color: #00E676;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color: rgb(187, 200, 226);
+}
+
+
+/* Home section */
+
+.home {
+    width: 100%;
+    padding-top: 60px;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
+    background-position: center top;
+	background-size:cover;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+
+.imgs img{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    margin:10px 0;
+    animation: big 0.8s backwards;
+    animation-direction: reverse;
+}
+
+
+.div_null{
+    border-bottom-left-radius: 10px;
+    margin:10px 0;
+}
+
+.info{
+    padding: 30px;
+}
+.info .info_product{
+    padding: 30px;
+}
+
+
+.info .pro-price h1{
+    padding: 0px 10px 10px 0px;
+    font-size: 40px;
+    
+    display: inline-flex;
+}
+
+.info .description p{
+    font-size: 20px;
+    word-wrap: 5px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.info .info_seller div{
+    margin-bottom: 10px;
+}
+.info .info_seller div img{
+    margin-right: 10px;
+}
+
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color: #111;
+}
+
+
+
+
+
+
+.myH2 {
+	text-align:center;
+	font-size: 4rem;
+}
+.myP {
+	text-align: justify;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 20px;
+}
+@media all and (max-width:700px){
+	.myP {
+		padding:2%;
+	}
+}
+
+
+#myImg , #myImg1, #myImg3 , #myImg4{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#myImg:hover {opacity: 0.7;}
+#myImg1:hover{opacity: 0.7;}
+#myImg3:hover{opacity: 0.7;}
+#myImg4:hover{opacity: 0.7;}
+/* The Modal (background) */
+.modal , .modal1 , .modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content , .modal-content1 , .modal-content3 {
+    margin:0 auto;
+    display: block;
+    width: 75%;
+    max-width: 75%;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption , .modal-content1 , .modal-content3 {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.out {
+  animation-name: zoom-out;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(1)}
+    to {-webkit-transform:scale(2)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0.4)}
+    to {transform:scale(1)}
+}
+
+@keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+.custom-shape-divider-top-1633168856 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    padding-left: 5px;
+    padding-right: 6px;
+}
+
+.custom-shape-divider-top-1633168856 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 266px;
+    transform: rotateY(180deg);
+    border-bottom-left-radius:10px ;
+}
+
+.custom-shape-divider-top-1633168856 .shape-fill {
+    fill: rgb(222, 228, 240);
+}
+
+.custom-shape-divider-bottom-1633170499 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-top: -50px;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1633170499 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 266px;
+    transform: rotateY(180deg);
+    padding-left: 6px;
+    padding-right: 5px;
+}
+
+.custom-shape-divider-bottom-1633170499 .shape-fill {
+    fill: rgb(222, 228, 240);
+}
+
+
+
+/*****************/
+* {
+	box-sizing: border-box;
+}
+
+
+body.dark {
+	background: #292C35;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+    margin-top: 25px;
+    float: right;
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
+}
+
+/*********/
+.img-container{
+    /* without these extra pixels, the last img in a row gets freaky as the transitions happen*/
+    width: 402px;
+    height: 400px;
+    position:absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    margin:auto;
+    font-size: 0;
+    }
+    
+    
+    .myimg{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 200px;
+    border:1px solid black;
+    margin: -1px;
+    display:inline-block;
+    position: relative;
+    z-index:1;
+    filter: brightness(50%);
+    -webkit-filter:brightness(50%);
+    -moz-filter:brightness(50%);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -ms-transition: 0.25s ease-in-out; /* IE10 is actually unprefixed */
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+    }
+    
+    /*this not added as a psuedoclass so it can be manipulated via the JS*/
+    .myimg.hovered{
+    width: 260px;
+    height: 260px;
+    margin: -31px;
+    z-index: 100;
+    filter: brightness(100%);
+    -webkit-filter:brightness(100%);
+    -moz-filter:brightness(100%);
+    }
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container-fluid {
+        margin: 0;
+    }
+    .div_null{
+        display: none;
+    }
+    .imgs{
+        display: block;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 50vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(17, 17, 17, 0.486);
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+    .label{
+        margin-right: 30px;
+    }
+    .div_null{
+        display: none;
+    }
+    .pro-price h1{
+        display: block;
+    }
+    #myImg , #myImg1, #myImg3 , #myImg4{
+        display: block;
+
+    }
+    #myImg:hover {opacity: 1;}
+#myImg1:hover{opacity: 1;}
+#myImg3:hover{opacity: 1;}
+#myImg4:hover{opacity: 1;}
+/* The Modal (background) */
+.modal , .modal1 , .modal3 {
+    display: none; /* Hidden by default */
+}
+/*.modal-content , .modal-content1 , .modal-content3 {
+    display: none;
+}
+#caption {
+    display: none;
+}*/
+}
+
+
+/*****/
+.slideanim {visibility:hidden;}
+.slide {
+  /* The name of the animation */
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}

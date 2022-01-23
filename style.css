@@ -1,0 +1,390 @@
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300');
+body{
+  margin:0%;
+  padding: 0%;
+}
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
+
+.main-menu {
+background:#d92662;
+border-right:none;
+position:fixed;
+top:0;
+bottom:0;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+/*-webkit-transform:translateZ(0) scale(1,1);*/
+z-index:1000;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+padding-top: 30px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+padding: 10px;
+ font-family: arial;
+font-size: 14px;
+text-decoration:none;
+/*-webkit-transform:translateZ(0) scale(1,1);*/
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+ .main-menu ul li a{
+    color: white;
+    font-family: serif;
+    text-decoration: none;
+    font-weight: lighter;
+
+}
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+
+/*
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#5fa2db;
+}*/
+
+
+/*****navbar*/
+.navbar{
+  background-color: white;
+  box-shadow: 4px 2px 4px #d92662;
+  padding: 10px;
+}
+.navbar p{
+  display: flex;
+  justify-content: flex-end;
+}
+.container{
+  margin-left: 60px;
+}
+
+#formArticie{
+  display: flex;
+}
+
+.form {
+  margin:30px 0px 20px;
+  padding:0px 100px;
+}
+.form h2 {
+  text-align:center;
+  color:#acacac;
+  font-size:40px;
+  font-weight:400;
+  
+}
+.form .grid {
+  display: inline-flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.form .grid .form-element {
+  width:200px;
+  height:200px;
+  margin-bottom: 20px;
+  box-shadow:0px 0px 20px 5px rgba(100,100,100,0.1);
+}
+.form .grid .form-element input {
+  display:none;
+}
+.form .grid #fileimage .form-element img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.form .grid .form-element div {
+  position:relative;
+  height:40px;
+  margin-top:-40px;
+  background:rgba(201, 67, 112, 0.5);
+  text-align:center;
+  line-height:40px;
+  font-size:13px;
+  color:#f5f5f5;
+  font-weight:600;
+}
+.form .grid .form-element div span {
+  font-size:20px;
+}
+
+#fileimage{
+  display: block;
+}
+/*******************/
+
+.inputinfos{
+  padding: 90px 30px;
+  margin: 0 auto;
+}
+.inputinfos input{
+  padding:5px 15px;
+  font-size: 15px;
+  border-radius: 5px;
+  outline: none;
+  margin: 5px 0px;
+  border: 1px solid #d92662;
+}
+.inputinfos select{
+  padding:5px 15px;
+  font-size: 15px;
+  width: 170px;
+  border-radius: 5px;
+  margin: 5px 0px;
+  border: 1px solid #d92662;
+}
+.inputinfos textarea{
+  padding:5px 15px;
+  font-size: 15px;
+  width: 430px;
+  border-radius: 5px;
+  outline: none;
+  margin: 5px 0px;
+  border: 1px solid #d92662;
+}
+
+.inputinfos #btnsend{
+  width: 460px;
+  padding:10px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #d92662;
+}
+.inputinfos #inputtitle {
+  width: 430px;
+}
+/************ table*/
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+table button{
+  padding: 10px 50px;
+  border-radius: 5px;
+  width: 180px;
+  border: none;
+  z-index: 5;
+  background: linear-gradient(45deg,#ee719a,#d92662);
+}
+
+@media screen and (max-width: 600px) {
+
+  #formArticie{
+    display: block;
+  }
+
+
+  .inputinfos input{
+    width: 348px;
+  }
+  .inputinfos select{
+    width: 380px;
+  }
+  .inputinfos textarea{
+    width: 350px;
+  }
+  
+  .inputinfos #btnsend{
+    width: 380px;
+  }
+  .inputinfos #inputtitle{
+    width: 348px;
+  }
+
+  
+  table {
+    border: 0;
+    margin: 0px auto;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  #fileimage{
+    display: flex;
+  }
+  
+
+  .form .grid .form-element {
+    width:180px;
+    height:180px;
+    padding: 10px;
+  }
+.form {
+  margin:0px;
+  padding:0px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* general styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+/**************from****************/

@@ -1,0 +1,240 @@
+.wrapper {
+  background: white;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
+  transition: -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
+}
+
+.wrapper:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper ._container {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper ._container .top {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper ._container .bottom {
+  width: 200%;
+  height: 20%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.wrapper ._container .bottom.clicked {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.wrapper ._container .bottom h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper ._container .bottom p {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper ._container .bottom .left {
+  height: 100%;
+  width: 50%;
+  background: #f4f4f4;
+  position: relative;
+  float: left;
+}
+
+.wrapper ._container .bottom .left .details {
+  padding: 20px;
+  float: left;
+  width: calc(70% - 40px);
+}
+
+.wrapper ._container .bottom .left .buy {
+  float: right;
+  width: calc(30% - 2px);
+  height: 100%;
+  padding: 20px;
+  background: #f1f1f1;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  border-left: solid thin rgba(0, 0, 0, 0.1);
+}
+
+.wrapper ._container .bottom .left .buy i {
+  font-size: 30px;
+  padding: 30px;
+  color: #254053;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.wrapper ._container .bottom .left .buy:hover {
+  background: #A6CDDE;
+}
+
+.wrapper ._container .bottom .left .buy:hover i {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  color: #00394B;
+}
+
+.wrapper ._container .bottom .right {
+  width: 50%;
+  background: #A6CDDE;
+  color: white;
+  float: right;
+  height: 200%;
+  overflow: hidden;
+}
+
+.wrapper ._container .bottom .right .details {
+  padding: 20px;
+  float: right;
+  width: calc(70% - 40px);
+}
+
+.wrapper ._container .bottom .right .done {
+  width: calc(30% - 2px);
+  float: left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  border-right: solid thin rgba(255, 255, 255, 0.3);
+  height: 50%;
+}
+
+.wrapper ._container .bottom .right .done i {
+  font-size: 30px;
+  padding: 30px;
+  color: white;
+}
+
+.wrapper ._container .bottom .right .remove {
+  width: calc(30% - 1px);
+  clear: both;
+  border-right: solid thin rgba(255, 255, 255, 0.3);
+  height: 50%;
+  background: #BC3B59;
+  -webkit-transition: background 0.5s, -webkit-transform 0.5s;
+  transition: background 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, background 0.5s;
+  transition: transform 0.5s, background 0.5s, -webkit-transform 0.5s;
+}
+
+.wrapper ._container .bottom .right .remove:hover {
+  background: #9B2847;
+}
+
+.wrapper ._container .bottom .right .remove:hover i {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.wrapper ._container .bottom .right .remove i {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  font-size: 30px;
+  padding: 30px;
+  color: white;
+}
+
+.wrapper ._container .bottom .right:hover .remove, .wrapper ._container .bottom .right:hover .done {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.wrapper .inside {
+  z-index: 9;
+  background: #92879B;
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  border-radius: 0px 0px 200px 200px;
+  -webkit-transition: all 0.5s, border-radius 2s, top 1s;
+  transition: all 0.5s, border-radius 2s, top 1s;
+  overflow: hidden;
+}
+
+.wrapper .inside .icon {
+  position: absolute;
+  right: 85px;
+  top: 85px;
+  color: white;
+  opacity: 1;
+}
+
+.wrapper .inside:hover {
+  width: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 0;
+  height: 90%;
+}
+
+.wrapper .inside:hover .icon {
+  opacity: 0;
+  right: 15px;
+  top: 15px;
+}
+
+.wrapper .inside:hover .contents {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.wrapper .inside .contents {
+  padding: 5%;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.8s;
+  transition: opacity 0.2s, -webkit-transform 0.8s;
+  transition: opacity 0.2s, transform 0.8s;
+  transition: opacity 0.2s, transform 0.8s, -webkit-transform 0.8s;
+}
+
+.wrapper .inside .contents table {
+  text-align: left;
+  width: 100%;
+}
+
+.wrapper .inside .contents h1, .wrapper .inside .contents p, .wrapper .inside .contents table {
+  color: white;
+}
+
+.wrapper .inside .contents p {
+  font-size: 13px;
+}
+/*# sourceMappingURL=style.css.map */

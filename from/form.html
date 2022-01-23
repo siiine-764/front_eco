@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/form.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row justify-content-md-center">
+
+
+    <div class="compenent-from">
+    <form action="" method="get">
+        <div  id="formArticie">
+                <div class="upload_images">
+                    <div class="form">
+                        <div class="grid">
+                            <div id="fileimage">
+                          <div class="form-element">
+                            <input type="file" id="file-1" accept="image/*">
+                            <label for="file-1" id="file-1-preview">
+                              <img src="https://bit.ly/3ubuq5o" alt="">
+                              <div>
+                                <span>+</span>
+                              </div>
+                            </label>
+                          </div>
+                          <div class="form-element">
+                            <input type="file" id="file-2" accept="image/*">
+                            <label for="file-2" id="file-2-preview">
+                              <img src="https://bit.ly/3ubuq5o" alt="">
+                              <div>
+                                <span>+</span>
+                              </div>
+                            </label>
+                          </div>
+                            </div>
+                            <div id="fileimage">
+                          <div class="form-element">
+                            <input type="file" id="file-3" accept="image/*">
+                            <label for="file-3" id="file-3-preview">
+                              <img src="https://bit.ly/3ubuq5o" alt="">
+                              <div>
+                                <span>+</span>
+                              </div>
+                            </label>
+                          </div>
+                          <div class="form-element">
+                            <input type="file" id="file-4" accept="image/*">
+                            <label for="file-4" id="file-4-preview">
+                              <img src="https://bit.ly/3ubuq5o" alt="">
+                              <div>
+                                <span>+</span>
+                              </div>
+                            </label>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+        
+                <div class="col-sm-6 inputinfos">
+                <input type="text" placeholder="Title" id="inputtitle">
+                <br>
+                <select name="" class="form-select">
+                    <option value="test1">test1</option>
+                    <option value="test2">test2</option>
+                    <option value="test3">test3</option>
+                </select>
+                <input type="text" name="" id="" placeholder="Prix" size="10">
+                <input type="text" size="9.5" value="MAD">
+                <br>
+                <textarea name="" id="" rows="10" placeholder="Description..."></textarea>
+                <br>
+                <input type="submit" id="btnsend" value="✔️">
+                </div>
+
+        </div>
+    </form>
+    </div>
+
+<script>
+    function previewBeforeUpload(id){
+  document.querySelector("#"+id).addEventListener("change",function(e){
+    if(e.target.files.length == 0){
+      return;
+    }
+    let file = e.target.files[0];
+    let url = URL.createObjectURL(file);
+    document.querySelector("#"+id+"-preview div").innerText = file.name;
+    document.querySelector("#"+id+"-preview img").src = url;
+  });
+}
+
+previewBeforeUpload("file-1");
+previewBeforeUpload("file-2");
+previewBeforeUpload("file-3");
+previewBeforeUpload("file-4");
+</script>
+</div>
+</div>
+</body>
+</html>
